@@ -47,11 +47,13 @@ public class yawMarksVel {
 		double InstantaneousVelocity = 0;
 		double velocity = 0;
 		double count;
-		for(count = 0; count <= time; count += .01) {
+		for(count = 0; count < time ; count += .05) {
 			InstantaneousVelocity = acceleration*count;
 			velocity = InstantaneousVelocity + vc;
 			System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second \n", count, velocity);
 		}
+		System.out.printf("At time = %.2f, the velocity of the car was 0 meters per second\n ", time);
+
 	}
 	
 	//return the critical velocity

@@ -169,10 +169,9 @@ public class estimateVelocity {
 			
 	}
 		
-	static Map<Integer, Object> simulations = new HashMap<Integer, Object>();
 	public static void main(String[] args) {
 		
-		
+		Map<Integer, Object> simulations = new HashMap<Integer, Object>();
 		boolean cont = true;
 		int simCount = 1;
 		double f = 0;
@@ -315,7 +314,8 @@ public class estimateVelocity {
 				    System.out.println(key + ": " + value);
 				}
 				int simSelect = kb.nextInt();
-				((skidMarksVel) simulations.get(simSelect)).getSimulation();
+				simulations.get(simSelect);
+				//((skidMarksVel) simulations.get(simSelect)).getSimulation();
 				
 			
 				break;

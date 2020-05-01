@@ -40,7 +40,7 @@ public class vaultVel {
 		double InstVel = 0;
 		double velocity;
 		System.out.printf("The time taken is %.2f seconds\n", time);
-		for(double count = 0; count < time - .01; count += .01) {
+		for(double count = 0; count < time ; count += .05) {
 			vertVel = g * count;
 			InstVel = Math.sqrt(Math.pow(vertVel, 2) + Math.pow(horizVel, 2));
 			velocity = vv + InstVel;
