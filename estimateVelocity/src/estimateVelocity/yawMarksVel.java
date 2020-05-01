@@ -22,11 +22,11 @@ public class yawMarksVel {
 		Scanner kb = new Scanner(System.in);
 		System.out.println();
 		System.out.println("Enter information to determine the critical velocity of the car");
-		System.out.println("Enter the radius of the yaw marks -- for precise calculation please enter 1/3 of the yaw marks: ");
+		System.out.println("Enter the radius of the yaw marks in meters -- for precise calculation please enter 1/3 of the yaw marks: ");
 		this.R = kb.nextDouble();
-		System.out.println("Plase enter the percentage of super-elevation");
+		System.out.println("Plase enter the percentage of super-elevation: ");
 		this.e = (kb.nextDouble())/100;
-		System.out.println("Enter the angle of the arc length from the 1/3 radius of the yaw mark:");
+		System.out.println("Enter the angle of the arc length from the 1/3 radius of the yaw mark in degrees: ");
 		this.theta = kb.nextDouble();
 
 	}
@@ -40,10 +40,10 @@ public class yawMarksVel {
 		double d = R*theta;
 		double scale = Math.pow(10, 2);
 		double time = (Math.round((d/(vc))*scale) / scale);
-		System.out.println("Time is: " + time);
-		System.out.println("The intital velocity is: " + vc);
+		System.out.printf("The time taken is %.2f seconds\n", time);
+		System.out.printf("The intital velocity of the car is %.2f meters per second\n", vc);
 		double acceleration = (-1)*(vc/time);
-		System.out.println("Decceleration of the car is: " + acceleration);
+		System.out.printf("Decceleration of the car is %.2f meter per second^2\n", acceleration);
 		double InstantaneousVelocity = 0;
 		double velocity = 0;
 		double count;

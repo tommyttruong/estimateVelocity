@@ -169,10 +169,10 @@ public class estimateVelocity {
 			
 	}
 		
-	
+	static Map<Integer, Object> simulations = new HashMap<Integer, Object>();
 	public static void main(String[] args) {
 		
-		Map<Integer, Object> simulations = new HashMap<Integer, Object>();
+		
 		boolean cont = true;
 		int simCount = 1;
 		double f = 0;
@@ -211,13 +211,27 @@ public class estimateVelocity {
 				System.out.printf("The initial velocity of the car was: %.2f\n", initialVel);
 				smv.getSimulation();
 				
-				System.out.println("Would you like to save this simulation?");
-				System.out.println("1: Yes");
-				System.out.println("2: No");
-				if(kb.nextInt() == 1)
-					simulations.put(simCount++, smv);
+				boolean check = false;
+				while(check == false) {
+					System.out.println("Would you like to save this simulation?");
+					System.out.println("1: Yes");
+					System.out.println("2: No");
+					int input = kb.nextInt();
+					if(input == 1) {
+						check = true;
+						simulations.put(simCount++, smv);
+						break;
+					}
+					else if(input == 2) {
+						check = true;
+						break;
+					}
+					else {
+						System.out.println("Invalid entry");
+						check = false;
+					}
+				}
 				break;
-				
 			case 2: //Yaw Mark Velocity --------------------------------------------------------------------------------------------------------	
 				f = getDragFactor();
 				System.out.printf("From the given condtions the drag factor of %.2f will be used\n",f);
@@ -229,30 +243,57 @@ public class estimateVelocity {
 				System.out.printf("the critical velocity of the car was %.2f\n", vc);
 				ymv.getSimulation();
 				
-				System.out.println("Would you like to save this simulation?");
-				System.out.println("1: Yes");
-				System.out.println("2: No");
-				if(kb.nextInt() == 1)
-					simulations.put(simCount++, ymv);
+				
+				boolean check1 = false;
+				while(check1 == false) {
+					System.out.println("Would you like to save this simulation?");
+					System.out.println("1: Yes");
+					System.out.println("2: No");
+					int input = kb.nextInt();
+					if(input == 1) {
+						check1 = true;
+						simulations.put(simCount++, ymv);
+						break;
+					}
+					else if(input == 2) {
+						check1 = true;
+						break;
+					}
+					else {
+						System.out.println("Invalid entry");
+						check1 = false;
+					}
+				}
 				break;
 				
 			case 3: //Vault Case Velocity --------------------------------------------------------------------------------------------------------	
-				f = getDragFactor();
-				System.out.printf("From the given condtions the drag factor of %.2f will be used\n",f);
-
-				vaultVel vcv = new vaultVel(9.8);
+				
+				vaultVel vcv = new vaultVel();
 				vcv.getInformation();
 				double vaultVelocity = vcv.getVaultVel();
 				System.out.printf("The velocity of the car before take off was %.2f \n", vaultVelocity);
 				vcv.getSimulation();	
-				
-				System.out.println("Would you like to save this simulation?");
-				System.out.println("1: Yes");
-				System.out.println("2: No");
-				if(kb.nextInt() == 1)
-					simulations.put(simCount++, vcv);
+				boolean check2 = false;
+				while(check2 == false) {
+					System.out.println("Would you like to save this simulation?");
+					System.out.println("1: Yes");
+					System.out.println("2: No");
+					int input = kb.nextInt();
+					if(input == 1) {
+						check2 = true;
+						simulations.put(simCount++, vcv);
+						break;
+					}
+					else if(input == 2) {
+						check2 = true;
+						break;
+					}
+					else {
+						System.out.println("Invalid entry");
+						check1 = false;
+					}
+				}
 				break;
-				
 			case 4:
 				System.out.println("Wear your seatbelt!");
 				break;
@@ -274,7 +315,7 @@ public class estimateVelocity {
 				    System.out.println(key + ": " + value);
 				}
 				int simSelect = kb.nextInt();
-				simulations.get(simSelect);
+				((skidMarksVel) simulations.get(simSelect)).getSimulation();
 				
 			
 				break;

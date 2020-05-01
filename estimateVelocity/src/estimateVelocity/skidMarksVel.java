@@ -142,10 +142,10 @@ public class skidMarksVel extends dragFactor{
 	public void getSimulation() {
 		double scale = Math.pow(10, 2);
 		double time = (Math.round((d/(vi-vf))*scale) / scale);
-		System.out.println("Time is: " + time);
-		System.out.println("The intital velocity is: " + vi);
+		System.out.printf("The time taken is %.2f seconds\n", time);
+		System.out.printf("The intital velocity is %.2f meters per second\n", vi);
 		double acceleration = (-1)*((vi-vf)/time);
-		System.out.println("Decceleration of the car is: " + acceleration);
+		System.out.printf("Decceleration of the car is %.2f meters per second^2 \n ", acceleration);
 		double InstantaneousVelocity = 0;
 		double velocity = 0;
 		double count;
