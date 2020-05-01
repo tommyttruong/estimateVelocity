@@ -1,6 +1,7 @@
 package estimateVelocity;
 
 import java.util.*;
+import java.util.Map.Entry;
 
 public class estimateVelocity {
 	
@@ -173,7 +174,7 @@ public class estimateVelocity {
 		
 		Map<Integer, Object> simulations = new HashMap<Integer, Object>();
 		boolean cont = true;
-		int simCount = 0;
+		int simCount = 1;
 		double f = 0;
 		
 		
@@ -213,8 +214,8 @@ public class estimateVelocity {
 				System.out.println("Would you like to save this simulation?");
 				System.out.println("1: Yes");
 				System.out.println("2: No");
-			//	if(kb.nextInt() == 1)
-			//		simulations.add(simCount++, smv);
+				if(kb.nextInt() == 1)
+					simulations.put(simCount++, smv);
 				break;
 				
 			case 2: //Yaw Mark Velocity --------------------------------------------------------------------------------------------------------	
@@ -231,25 +232,25 @@ public class estimateVelocity {
 				System.out.println("Would you like to save this simulation?");
 				System.out.println("1: Yes");
 				System.out.println("2: No");
-			//	if(kb.nextInt() == 1)
-			//		simulations.add(ymv);
+				if(kb.nextInt() == 1)
+					simulations.put(simCount++, ymv);
 				break;
 				
 			case 3: //Vault Case Velocity --------------------------------------------------------------------------------------------------------	
 				f = getDragFactor();
 				System.out.printf("From the given condtions the drag factor of %.2f will be used\n",f);
 
-				vaultVel vault = new vaultVel(9.8);
-				vault.getInformation();
-				double vaultVelocity = vault.getVaultVel();
+				vaultVel vcv = new vaultVel(9.8);
+				vcv.getInformation();
+				double vaultVelocity = vcv.getVaultVel();
 				System.out.printf("The velocity of the car before take off was %.2f \n", vaultVelocity);
-				vault.getSimulation();	
+				vcv.getSimulation();	
 				
 				System.out.println("Would you like to save this simulation?");
 				System.out.println("1: Yes");
 				System.out.println("2: No");
-			//	if(kb.nextInt() == 1)
-			//		simulations.add(vcv);
+				if(kb.nextInt() == 1)
+					simulations.put(simCount++, vcv);
 				break;
 				
 			case 4:
@@ -267,11 +268,15 @@ public class estimateVelocity {
 					System.out.println("Please try again");
 				}
 				System.out.println("Please select from the following");
-		//		int count = 0;
-		//		Iterator iter = simulations.iterator();
-		//		while(iter.hasNext()) {
-		//			System.out.println((count++) + ": "+ iter);
-		//		}
+				for (Map.Entry<Integer, Object> entry : simulations.entrySet()) {
+				    Integer key = entry.getKey();
+				    Object value = entry.getValue();
+				    System.out.println(key + ": " + value);
+				}
+				int simSelect = kb.nextInt();
+				simulations.get(simSelect);
+				
+			
 				break;
 				
 			case 6:	

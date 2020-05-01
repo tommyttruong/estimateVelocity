@@ -58,5 +58,9 @@ public class yawMarksVel {
 	public double getCriticalVel() {
 		return vc;
 	}
+	
+	public String toString() {
+		return "Initial Velocity: " + vc + "\nDrag Factor: " + f;
+	}
 
 }

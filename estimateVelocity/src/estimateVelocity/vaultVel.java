@@ -56,4 +56,8 @@ public class vaultVel {
 		return vv;
 	}
 	
+	public String toString() {
+		return "Vault Velocity: " + vv;
+	}
+	
 }

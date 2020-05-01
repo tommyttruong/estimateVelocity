@@ -165,7 +165,7 @@ public class skidMarksVel extends dragFactor{
 	
 	
 	public String toString() {
-		return "The initial velocity of the car before the impact was: " + vi;
+		return "Initial Velocity: " + vi + "\nDrag Factor: f";
 	}
 	
 }
