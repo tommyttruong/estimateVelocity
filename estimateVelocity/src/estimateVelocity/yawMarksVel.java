@@ -1,7 +1,7 @@
 package estimateVelocity;
 
 import java.util.*;
-public class yawMarksVel {
+public class yawMarksVel extends velocityCase {
 	double f;// drag factor
 	double R;// radius of the yaw mark
 	double g;// gravity
@@ -62,7 +62,7 @@ public class yawMarksVel {
 	}
 	
 	public String toString() {
-		return "Initial Velocity: " + vc + "\nDrag Factor: " + f;
+		return String.format("Initial Velocity Based on Yaw Marks: %.2f Drag Factor: %.2f\n", vc, f);
 	}
 
 }

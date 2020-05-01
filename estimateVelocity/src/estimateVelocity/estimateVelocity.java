@@ -170,8 +170,8 @@ public class estimateVelocity {
 	}
 		
 	public static void main(String[] args) {
+		Map<Integer, velocityCase> simulations = new HashMap<Integer, velocityCase>();
 		
-		Map<Integer, Object> simulations = new HashMap<Integer, Object>();
 		boolean cont = true;
 		int simCount = 1;
 		double f = 0;
@@ -308,14 +308,14 @@ public class estimateVelocity {
 					System.out.println("Please try again");
 				}
 				System.out.println("Please select from the following");
-				for (Map.Entry<Integer, Object> entry : simulations.entrySet()) {
+				for (Map.Entry<Integer, velocityCase> entry : simulations.entrySet()) {
 				    Integer key = entry.getKey();
 				    Object value = entry.getValue();
 				    System.out.println(key + ": " + value);
 				}
 				int simSelect = kb.nextInt();
-				simulations.get(simSelect);
-				//((skidMarksVel) simulations.get(simSelect)).getSimulation();
+				simulations.get(simSelect).getSimulation();
+
 				
 			
 				break;
@@ -325,9 +325,7 @@ public class estimateVelocity {
 				cont = false;
 				break;
 	
-			}
-		
-			
+			}	
 		}
 		kb.close();
 	}

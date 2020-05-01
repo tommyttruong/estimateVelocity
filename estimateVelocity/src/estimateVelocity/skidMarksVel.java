@@ -2,7 +2,7 @@ package estimateVelocity;
 
 import java.util.Scanner;
 
-public class skidMarksVel {
+public class skidMarksVel extends velocityCase{
 	double f; // drag factor
 	double g; // gravity
 	double vf; // final velocity
@@ -154,9 +154,7 @@ public class skidMarksVel {
 			velocity = InstantaneousVelocity + vi;
 			System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second \n", count, velocity);
 		}
-		System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second\n ", time, vf);
-
-		
+		System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second\n ", time, vf);	
 		
 	}
 	// return the initial velocity of the car
@@ -167,7 +165,7 @@ public class skidMarksVel {
 	
 	
 	public String toString() {
-		return "Initial Velocity: " + vi + "\nDrag Factor: f";
+		return String.format("Initial Velocity Based on Skid Marks: %.2f Drag Factor: %.2f\n", vi, f);
 	}
 	
 }

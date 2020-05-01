@@ -1,7 +1,7 @@
 package estimateVelocity;
 
 import java.util.*;
-public class vaultVel {
+public class vaultVel extends velocityCase {
 	double g;// gravity
 	double D;// horizontal distance
 	double H;// vertical distance
@@ -57,7 +57,7 @@ public class vaultVel {
 	}
 	
 	public String toString() {
-		return "Vault Velocity: " + vv;
+		return String.format("Vault Velocity base on Vault Case: %.2f\n" , vv);
 	}
 	
 }
