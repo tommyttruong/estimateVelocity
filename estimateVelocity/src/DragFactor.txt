@@ -1,0 +1,252 @@
+// Various Drag Factors, made from acronym i.e. dcnlf = Dry, cement, new, less than 30mph, from and 
+// dcnlt = Dry, cement, new, less than 30mph, to
+
+//Dry/Wet Cement New, Sharp
+dcnl
+dcnlf = .80
+dcnlt = 1.2
+
+dcnm
+dcnmf = .70
+dcnmt = 1.00
+
+wcnl
+wcnlf = .50
+wcnlt = .80
+
+wcnm
+wcnmf = .40
+wcnmt = .75
+
+//Dry/Wet Cement, Travelled
+dctl
+dctlf = .60
+dctlt = .80
+
+dctm
+dctmf = .60
+dctmt = .75
+
+wctl
+wctlf = .45
+wctlt = .70
+
+wctm
+wctmf = .45
+wctmt = .65
+
+//Dry/Wet Cement, Polished
+dcplf
+dcplf = .55
+dcplt = .75
+
+dcpm
+dcpmf = .50
+dcpmt = .65
+
+wcpl
+wcplf = .45
+wcplt = .65
+
+wcpm
+wcpmf = .45
+wcpmt = .60
+
+//Dry/Wet Asphalt or Tar New, Sharp
+danl
+danlf = .80
+danlt = 1.20
+
+danm
+danmf = .65
+danmt = 1.00
+
+wanl
+wanlf = .50
+wanlt = .80
+
+wanm
+wanmf = .45
+wanmt = .75
+
+//Dry/Wet Asphalt or Tar, Travelled
+datl
+datlf = .60
+datlt = .80
+
+datm
+datmf = .55
+datmt = .70
+
+watl
+watlf = .45
+watlt = .70
+
+watm
+watmf = .40
+watmt = .65
+
+////Dry/Wet Asphalt or Tar, Polished
+dapl
+daplf = .55
+daplt = .75
+
+dapm
+dapmf = .45
+dapmt = .65
+
+wapl
+waplf = .45
+waplt = .65
+
+wapm
+wapmf = .40
+wapmt = .60
+
+//Dry/Wet Asphalt or Tar, Excess Tar
+dael
+daelf = .50
+daelt = .60
+
+daem
+daemf = .35
+daemt = .60
+
+wael
+waelf = .30
+waelt = .60
+
+waef
+waemf = .25
+waemt = .55
+
+//Dry/Wet Gravel, Packed, Oiled
+dgpl
+dgplf = .55
+dgplt = .85
+
+dgpm
+dgpmf = .50
+dgpmt = .80
+
+wgpl
+wgplf = .40
+wgplt = .80
+
+wgpm
+wgpmf = .40
+wgpmt = .60
+
+//Dry/Wet Gravel, Loose
+dgll
+dgllf = .40
+dgllt = .70
+
+dglm
+dglmf = .40
+dglmt = .70
+
+wgll
+wgllf = .45
+wgllt = .75
+
+wglm
+wglmf = .45
+wglmt = .75
+
+//Dry/Wet Cinders, Packed
+dcpl
+dcplf = .50
+dcplt = .70
+
+dcpm
+dcpmf = .50
+dcpmt = .70
+
+wcpl
+wcplf = .65
+wcplt = .75
+
+wcpm
+wcpmf = .65
+wcpmt = .75
+
+//Dry/Wet Rock, Crushed
+drcl
+drclf = .55
+drclt = .75
+
+drcm
+drcmf = .55
+drcmt = .75
+
+wrcl
+wrclf = .55
+wrclt = .75
+
+wrcm
+wrcmf = .55
+wrcmt = .75
+
+//Dry/Wet Ice, Smooth
+disl
+dislf = .10
+dislt = .25
+
+dism
+dismf = .07
+dismt = .20
+
+wisl
+wislf = .05
+wislt = .10
+
+wism
+wismf = .05
+wismt = .10
+
+//Dry/Wet Snow, Packed
+dspl
+dsplf = .30
+dsplt = .55
+
+dspm
+dspmf = .35
+dspmt = .55
+
+wspl
+wsplf = .30
+wsplt = .60
+
+wspm
+wspmf = .30
+wspmt = .60
+
+//Dry/Wet Snow, Loose
+dsll
+dsllf = .10
+dsllt = .25
+
+dslm
+dslmf = .10
+dslmt = .20
+
+wsll
+wsllf = .30
+wsllt = .60
+
+wslm
+wslmf = .30
+wslmt = .60
+
+
+
+
+
+
+
+
+
+
+
+
