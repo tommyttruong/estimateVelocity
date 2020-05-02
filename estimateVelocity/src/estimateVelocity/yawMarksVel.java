@@ -22,12 +22,12 @@ public class yawMarksVel extends velocityCase {
 	public void getInformation() {
 		Scanner kb = new Scanner(System.in);
 		System.out.println();
-		System.out.println("Enter information to determine the critical velocity of the car");
-		System.out.println("Enter the radius of the yaw marks in meters -- for precise calculation please enter 1/3 of the yaw marks: ");
+		System.out.println("\nEnter information to determine the critical velocity of the car");
+		System.out.println("\nEnter the radius of the yaw marks in meters -- for precise calculation please enter 1/3 of the yaw marks: ");
 		this.R = kb.nextDouble();
-		System.out.println("Plase enter the percentage of super-elevation: ");
+		System.out.println("\nPlase enter the percentage of super-elevation: ");
 		this.e = (kb.nextDouble())/100;
-		System.out.println("Enter the angle of the arc length from the 1/3 radius of the yaw mark in degrees: ");
+		System.out.println("\nEnter the angle of the arc length from the 1/3 radius of the yaw mark in degrees: ");
 		this.theta = kb.nextDouble();
 
 	}
@@ -41,7 +41,7 @@ public class yawMarksVel extends velocityCase {
 		double d = R*theta;
 		double scale = Math.pow(10, 2);
 		double time = (Math.round((d/(vc))*scale) / scale);
-		System.out.printf("The time taken is %.2f seconds\n", time);
+		System.out.printf("\nThe time taken is %.2f seconds\n", time);
 		System.out.printf("The intital velocity of the car is %.2f meters per second\n", vc);
 		acceleration = (-1)*(vc/time);
 		System.out.printf("Decceleration of the car is %.2f meter per second^2\n", acceleration);
@@ -63,7 +63,7 @@ public class yawMarksVel extends velocityCase {
 	}
 	
 	public void getReport() {
-		System.out.printf("******************************REPORT******************************\n");
+		System.out.printf("\n******************************REPORT******************************\n");
 		System.out.printf("* %63s*\n", " ");
 		System.out.printf("* Drag Factor: %-50.2f*\n", f);
 		System.out.printf("* Radius of the Yaw Mark: %-39.2f*\n", R);

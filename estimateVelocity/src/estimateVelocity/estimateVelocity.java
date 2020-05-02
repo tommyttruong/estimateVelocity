@@ -15,12 +15,12 @@ public class estimateVelocity {
 		
 		String factor = "";
 	
-		System.out.println("Is the road surface wet or dry?");
+		System.out.println("\nIs the road surface wet or dry?");
 		System.out.println("Please enter 1 for wet, or 2 for dry");
 		
 		int wetness = kb.nextInt();
 		while(!((wetness == 1) || (wetness == 2))) {
-			System.out.println("That is not an option");
+			System.out.println("\nThat is not an option");
 			System.out.println("Please enter 1 for wet, or 2 for dry");
 			wetness = kb.nextInt();
 		}
@@ -30,7 +30,7 @@ public class estimateVelocity {
 			if(wetness == 2)
 				factor = factor + "d";
 		
-		System.out.println("Please choose the type of road surface");
+		System.out.println("\nPlease choose the type of road surface");
 		System.out.println("1: Portland Cement");
 		System.out.println("2: Asphalt or Tar");
 		System.out.println("3: Gravel");
@@ -40,7 +40,7 @@ public class estimateVelocity {
 		System.out.println("7: Snow");
 		int roadSurface = kb.nextInt();
 		while((roadSurface < 1) || (roadSurface > 7)) {
-			System.out.println("That is not an option");
+			System.out.println("\nThat is not an option");
 			System.out.println("Please choose the type of road surface");
 			System.out.println("1: Portland Cement");
 			System.out.println("2: Asphalt or Tar");
@@ -53,13 +53,13 @@ public class estimateVelocity {
 		}
 		switch (roadSurface) {
 		case 1:
-			System.out.println("Please select the cement type");
+			System.out.println("\nPlease select the cement type");
 			System.out.println("1: New, Sharp");
 			System.out.println("2: Travelled");
 			System.out.println("3: Polished");
 			int cementType = kb.nextInt();
 			while(cementType<1 || cementType>3) {
-				System.out.println("That is not an option");
+				System.out.println("\nThat is not an option");
 				System.out.println("Please select the cement type");
 				System.out.println("1: New, Sharp");
 				System.out.println("2: Travelled");
@@ -76,14 +76,14 @@ public class estimateVelocity {
 						factor = factor + "cp";
 			break;
 		case 2:
-			System.out.println("Please select the type of asphalt");
+			System.out.println("\nPlease select the type of asphalt");
 			System.out.println("1: New, Sharp");
 			System.out.println("2: Travelled");
 			System.out.println("3: Polished");
 			System.out.println("4: Excess Tar");
 			int asphaltType = kb.nextInt();
 			while(asphaltType<1 || asphaltType>4) {
-				System.out.println("That is not an option");
+				System.out.println("\nThat is not an option");
 				System.out.println("Please select the type of asphalt");
 				System.out.println("1: New, Sharp");
 				System.out.println("2: Travelled");
@@ -104,12 +104,12 @@ public class estimateVelocity {
 							factor = factor + "ae";
 			break;
 		case 3:
-			System.out.println("Please select the type of gravel");
+			System.out.println("\nPlease select the type of gravel");
 			System.out.println("1: Packed, Oiled");
 			System.out.println("2: Loose");
 			int gravelType = kb.nextInt();
 			while(gravelType<1 || gravelType>2) {
-				System.out.println("That is not an option");
+				System.out.println("\nThat is not an option");
 				System.out.println("Please select the type of gravel");
 				System.out.println("1: Packed, Oiled");
 				System.out.println("2: Loose");
@@ -131,12 +131,12 @@ public class estimateVelocity {
 			factor = factor + "is";
 			break;
 		case 7: 
-			System.out.println("Please select the type of ice");
+			System.out.println("\nPlease select the type of ice");
 			System.out.println("1: Packed");
 			System.out.println("2: Loose");
 			int iceType = kb.nextInt();
 			while(iceType<1 || iceType>2) {
-				System.out.println("That is not an option");
+				System.out.println("\nThat is not an option");
 				System.out.println("Please select the type of ice");
 				System.out.println("1: Packed");
 				System.out.println("2: Loose");
@@ -150,11 +150,11 @@ public class estimateVelocity {
 			break;
 		}
 		
-		System.out.println("Was the vehicle moving faster than 30 mph?");
+		System.out.println("\nWas the vehicle moving faster than 30 mph?");
 		System.out.println("Press 1 if it was moving faster, 2 if it was moving slower");
 		int speed = kb.nextInt();
 		while(speed<1 || speed>2) {
-			System.out.println("That is not an option");
+			System.out.println("\nThat is not an option");
 			System.out.println("Was the vehicle moving faster than 30 mph?");
 			System.out.println("Press 1 if it was moving faster, 2 if it was moving slower");
 			speed = kb.nextInt();
@@ -178,7 +178,7 @@ public class estimateVelocity {
 		
 		
 		while(cont) {	//Main Menu --------------------------------------------------------------------------------------------------------	
-			System.out.println("What would you like to do?: ");
+			System.out.println("\nWhat would you like to do?: ");
 			System.out.println("1: View velocity and simulation based on skid marks");
 			System.out.println("2: View velocity and simulation based on yaw marks");
 			System.out.println("3: View velocity and simulation based on an airborne vehicle");
@@ -187,7 +187,7 @@ public class estimateVelocity {
 			System.out.println("6: Exit");
 			int caseNumber = kb.nextInt();
 			while(caseNumber<1 || caseNumber>6) {
-				System.out.println("That is not an option");
+				System.out.println("\nThat is not an option");
 				System.out.println("What would you like to do?: ");
 				System.out.println("1: View velocity and simulation based on skid marks");
 				System.out.println("2: View velocity and simulation based on yaw marks");
@@ -213,7 +213,7 @@ public class estimateVelocity {
 				
 				boolean check = false;
 				while(check == false) {
-					System.out.println("Would you like to save this simulation?");
+					System.out.println("\nWould you like to save this simulation?");
 					System.out.println("1: Yes");
 					System.out.println("2: No");
 					int input = kb.nextInt();
@@ -240,14 +240,14 @@ public class estimateVelocity {
 				ymv.getInformation();
 				ymv.calCriticalVel();
 				double vc = ymv.getCriticalVel();
-				System.out.printf("the critical velocity of the car was %.2f\n", vc);
+				System.out.printf("\nthe critical velocity of the car was %.2f\n", vc);
 				ymv.getSimulation();
 				ymv.getReport();
 				
 				
 				boolean check1 = false;
 				while(check1 == false) {
-					System.out.println("Would you like to save this simulation?");
+					System.out.println("\nWould you like to save this simulation?");
 					System.out.println("1: Yes");
 					System.out.println("2: No");
 					int input = kb.nextInt();
@@ -272,12 +272,12 @@ public class estimateVelocity {
 				vaultVel vcv = new vaultVel();
 				vcv.getInformation();
 				double vaultVelocity = vcv.getVaultVel();
-				System.out.printf("The velocity of the car before take off was %.2f \n", vaultVelocity);
+				System.out.printf("\nThe velocity of the car before take off was %.2f \n", vaultVelocity);
 				vcv.getSimulation();	
 				vcv.getReport();
 				boolean check2 = false;
 				while(check2 == false) {
-					System.out.println("Would you like to save this simulation?");
+					System.out.println("\nWould you like to save this simulation?");
 					System.out.println("1: Yes");
 					System.out.println("2: No");
 					int input = kb.nextInt();
@@ -298,7 +298,7 @@ public class estimateVelocity {
 				break;
 			case 4:{
 				System.out.println("Here are some websites that will help you learn how to drive safely and understand why practicing it is important for you.");
-				System.out.println("https://drivesafe.com/");
+				System.out.println("\nhttps://drivesafe.com/");
 				System.out.println("https://www.teenlife.com/blogs/safe-driving-why-its-so-important-for-your-teen");
 				System.out.println("https://www.drive-safely.net/importance-road-safety/");
 				System.out.println("https://www.fmslaw.org/news/2017/august/why-wearing-a-seat-belt-is-important/");
@@ -319,7 +319,7 @@ public class estimateVelocity {
 					}
 					System.out.println("Please try again");
 				}
-				System.out.println("Please select from the following");
+				System.out.println("\nPlease select from the following");
 				for (Map.Entry<Integer, velocityCase> entry : simulations.entrySet()) {
 				    Integer key = entry.getKey();
 				    Object value = entry.getValue();
@@ -327,7 +327,8 @@ public class estimateVelocity {
 				}
 				int simSelect = kb.nextInt();
 				simulations.get(simSelect).getSimulation();
-
+				System.out.println("");
+				simulations.get(simSelect).getReport();
 				
 			
 				break;

@@ -29,27 +29,28 @@ public class skidMarksVel extends velocityCase{
 		System.out.println();
 		System.out.println("Enter information to determine the initial velocity of the car");
 		while(check == false) {
-			System.out.println("Was there vehicle rotation?\n1. Yes\n2. No");
+			System.out.println("\nWas there vehicle rotation?\n1. Yes\n2. No");
 			input = kb.next();
 			if(input.equals("1")) {
 				check = true;
 				boolean check2 = false;
 				while(check2 == false) {
-					System.out.println("Did all three tires leave Skid-marks?\n1. Yes\n2. No");
+					System.out.println();
+					System.out.println("\nDid all three tires leave Skid-marks?\n1. Yes\n2. No");
 					input = kb.next();
 					if(input.equals("1")) {
 						check2 = true;
-						System.out.print("Enter the average skid distance in meters: ");
+						System.out.print("\nEnter the average skid distance in meters: ");
 						this.d = kb.nextDouble();
-						System.out.println("Enter the final velocity of car in meters per second: ");
+						System.out.println("\nEnter the final velocity of car in meters per second: ");
 						this.vf = kb.nextDouble();
 						vi = Math.sqrt(((2*f*g*d) + (Math.pow(vf, 2))));
 					}
 					else if(input.equals("2")){
 						check2 = true;
-						System.out.print("Enter the distance between impact and rest in meters: ");
+						System.out.print("\nEnter the distance between impact and rest in meters: ");
 						this.d = kb.nextDouble();
-						System.out.println("Enter the final velocity of car in meters per second: ");
+						System.out.println("\nEnter the final velocity of car in meters per second: ");
 						this.vf = kb.nextDouble();
 						vi = Math.sqrt(((2*f*g*d) + (Math.pow(vf, 2))));	
 					}
@@ -63,30 +64,30 @@ public class skidMarksVel extends velocityCase{
 				check = true;
 				boolean check3 = false;
 				while(check3 == false) {
-					System.out.println("Are there over-lapping skid-marks?\n1. Yes\n2. No");
+					System.out.println("\nAre there over-lapping skid-marks?\n1. Yes\n2. No");
 					input = kb.next();
 					if(input.equals("1")) {
 						check3 = true;
 						boolean check4 = false;
 						while(check4 == false) {
-							System.out.println("Is there pre-impact phase?\n1. Yes\n2. No");
+							System.out.println("\nIs there pre-impact phase?\n1. Yes\n2. No");
 							input = kb.next();
 							if(input.equals("1")) {
 								check4 = true;
-								System.out.print("Enter the longest skid distance in meters: \n");
+								System.out.print("\nEnter the longest skid distance in meters: \n");
 								double longSkid = kb.nextDouble();
-								System.out.print("Enter the W-base: \n");
+								System.out.print("\nEnter the W-base: \n");
 								double wbase = kb.nextDouble();
 								this.d = longSkid - wbase;
-								System.out.println("Enter the final velocity of car in meters per second: ");
+								System.out.println("\nEnter the final velocity of car in meters per second: ");
 								this.vf = kb.nextDouble();
 								vi = Math.sqrt(((2*f*g*d) + (Math.pow(vf, 2))));
 							}
 							else if (input.equals("2")) {
 								check4 = true;
-								System.out.println("Enter the longest skid distance in meters: ");
+								System.out.println("\nEnter the longest skid distance in meters: ");
 								this.d = kb.nextDouble();
-								System.out.println("Enter the final velocity of car in meters per second: ");
+								System.out.println("\nEnter the final velocity of car in meters per second: ");
 								this.vf = kb.nextDouble();
 								vi = Math.sqrt(((2*f*g*d) + (Math.pow(vf, 2))));
 							}
@@ -100,21 +101,21 @@ public class skidMarksVel extends velocityCase{
 						check3 = true;
 						boolean check5 = false;
 						while(check5 == false) {
-							System.out.println("Was there Uniform brake application?\n1. Yes\n2. No");
+							System.out.println("\nWas there Uniform brake application?\n1. Yes\n2. No");
 							input = kb.next();
 							if(input.equals("1")) {
 								check5 = true;
-								System.out.println("Enter the longest skid distance in meters:");
+								System.out.println("\nEnter the longest skid distance in meters:");
 								this.d = kb.nextDouble();
-								System.out.println("Enter the final velocity of car in meters per second: ");
+								System.out.println("\nEnter the final velocity of car in meters per second: ");
 								this.vf = kb.nextDouble();
 								vi = Math.sqrt(((2*f*g*d) + (Math.pow(vf, 2))));	
 							}
 							else if (input.equals("2")) {
 								check5 = true;
-								System.out.println("Enter the average skid distance in meters:");
+								System.out.println("\nEnter the average skid distance in meters:");
 								this.d = kb.nextDouble();
-								System.out.println("Enter the final velocity of car in meters per second: ");
+								System.out.println("\nEnter the final velocity of car in meters per second: ");
 								this.vf = kb.nextDouble();
 								vi = Math.sqrt(((2*f*g*d) + (Math.pow(vf, 2))));
 							}
@@ -143,8 +144,8 @@ public class skidMarksVel extends velocityCase{
 	public void getSimulation() {
 		double scale = Math.pow(10, 2);
 		double time = (Math.round((d/(vi-vf))*scale) / scale);
-		System.out.printf("The time taken is %.2f seconds\n", time);
-		System.out.printf("The intital velocity is %.2f meters per second\n", vi);
+		System.out.printf("\nThe time taken is %.2f seconds\n", time);
+		System.out.printf("The intital velocity is %.2f meters per second\n\n", vi);
 		acceleration = (-1)*((vi-vf)/time);
 		double InstantaneousVelocity = 0;
 		double velocity = 0;
@@ -158,7 +159,7 @@ public class skidMarksVel extends velocityCase{
 	}
 	
 	public void getReport() {
-		System.out.printf("******************************REPORT******************************\n");
+		System.out.printf("\n******************************REPORT******************************\n");
 		System.out.printf("* %63s*\n", " ");
 		System.out.printf("* Drag Factor: %-50.2f*\n", f);
 		System.out.printf("* Final Velocity: %-47.2f*\n", vf);
