@@ -1,5 +1,13 @@
 package estimateVelocity;
-
+/**********************************************************************************************
+ * Sidhpura, Atah Mohammed, Tommy Troung
+ * Software Engineering
+ * Dr. Andrei
+ * 05/03/20
+ * 
+ * Final Project: 'Estamating vehicle's velocity based on skid marks, yaw marks, and vault case'
+ * ********************************************************************************************
+ */
 import java.util.*;
 import java.util.Map.Entry;
 
