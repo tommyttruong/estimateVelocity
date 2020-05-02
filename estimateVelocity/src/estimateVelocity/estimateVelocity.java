@@ -305,7 +305,7 @@ public class estimateVelocity {
 				System.out.println("https://battafulkerson.com/safe-distance-between-cars-driving/");
 				System.out.println("https://www.drive-safely.net/importance-regular-vehicle-maintenance/");
 				System.out.println("https://www.esurance.com/info/car/how-to-handle-a-car-accident");
-				System.out.println("https://www.weisbergcummings.com/witness-car-accident/");
+				System.out.println("https://www.weisbergcummings.com/witness-car-accident");
 			}
 				break;
 				
