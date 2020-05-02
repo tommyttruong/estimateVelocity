@@ -293,8 +293,17 @@ public class estimateVelocity {
 					}
 				}
 				break;
-			case 4:
-				System.out.println("Wear your seatbelt!");
+			case 4:{
+				System.out.println("Here are some websites that will help you learn how to drive safely and understand why practicing it is important for you.");
+				System.out.println("https://drivesafe.com/");
+				System.out.println("https://www.teenlife.com/blogs/safe-driving-why-its-so-important-for-your-teen");
+				System.out.println("https://www.drive-safely.net/importance-road-safety/");
+				System.out.println("https://www.fmslaw.org/news/2017/august/why-wearing-a-seat-belt-is-important/");
+				System.out.println("https://battafulkerson.com/safe-distance-between-cars-driving/");
+				System.out.println("https://www.drive-safely.net/importance-regular-vehicle-maintenance/");
+				System.out.println("https://www.esurance.com/info/car/how-to-handle-a-car-accident");
+				System.out.println("https://www.weisbergcummings.com/witness-car-accident/");
+			}
 				break;
 				
 			case 5:
