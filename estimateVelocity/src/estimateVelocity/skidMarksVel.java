@@ -8,6 +8,7 @@ public class skidMarksVel extends velocityCase{
 	double vf; // final velocity
 	double vi = 0; // initial velocity
 	double d = 0;
+	double acceleration = 0;
 
 	public skidMarksVel() {
 		
@@ -144,8 +145,7 @@ public class skidMarksVel extends velocityCase{
 		double time = (Math.round((d/(vi-vf))*scale) / scale);
 		System.out.printf("The time taken is %.2f seconds\n", time);
 		System.out.printf("The intital velocity is %.2f meters per second\n", vi);
-		double acceleration = (-1)*((vi-vf)/time);
-		System.out.printf("Decceleration of the car is %.2f meters per second^2 \n ", acceleration);
+		acceleration = (-1)*((vi-vf)/time);
 		double InstantaneousVelocity = 0;
 		double velocity = 0;
 		double count;
@@ -154,9 +154,21 @@ public class skidMarksVel extends velocityCase{
 			velocity = InstantaneousVelocity + vi;
 			System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second \n", count, velocity);
 		}
-		System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second\n ", time, vf);	
-		
+		System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second\n", time, vf);	
 	}
+	
+	public void getReport() {
+		System.out.printf("******************************REPORT******************************\n");
+		System.out.printf("* %63s*\n", " ");
+		System.out.printf("* Drag Factor: %-50.2f*\n", f);
+		System.out.printf("* Final Velocity: %-47.2f*\n", vf);
+		System.out.printf("* Equation: vi = sqrt(2fgd + vf^2)                               *\n");
+		System.out.printf("* Initial Velocity: %-45.2f*\n", vi);
+		System.out.printf("* Decceleration of the car is %-35.2f*\n", acceleration);
+		System.out.printf("* %63s*\n", " ");
+		System.out.printf("******************************************************************\n");
+	}
+	
 	// return the initial velocity of the car
 	public double getSkidMarksVel() {
 		return vi;

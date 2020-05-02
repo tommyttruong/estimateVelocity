@@ -209,6 +209,7 @@ public class estimateVelocity {
 				double initialVel = smv.getSkidMarksVel();
 				System.out.printf("The initial velocity of the car was: %.2f\n", initialVel);
 				smv.getSimulation();
+				smv.getReport();
 				
 				boolean check = false;
 				while(check == false) {
@@ -241,6 +242,7 @@ public class estimateVelocity {
 				double vc = ymv.getCriticalVel();
 				System.out.printf("the critical velocity of the car was %.2f\n", vc);
 				ymv.getSimulation();
+				ymv.getReport();
 				
 				
 				boolean check1 = false;
@@ -272,6 +274,7 @@ public class estimateVelocity {
 				double vaultVelocity = vcv.getVaultVel();
 				System.out.printf("The velocity of the car before take off was %.2f \n", vaultVelocity);
 				vcv.getSimulation();	
+				vcv.getReport();
 				boolean check2 = false;
 				while(check2 == false) {
 					System.out.println("Would you like to save this simulation?");
