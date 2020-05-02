@@ -13,6 +13,14 @@ public class skidMarksVel extends velocityCase{
 	public skidMarksVel() {
 		
 	}
+	
+	public skidMarksVel(double f, double g, double vf, double d) {
+		this.f = f;
+		this.g = g;
+		this.vf = vf;
+		this.d = d;
+		vi = Math.sqrt(((2*f*g*d) + (Math.pow(vf, 2))));
+	}
 
 	public skidMarksVel(double f, double g) {
 		this.f = f;

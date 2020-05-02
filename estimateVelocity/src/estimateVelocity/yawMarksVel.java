@@ -13,6 +13,16 @@ public class yawMarksVel extends velocityCase {
 		
 	}
 	
+	public yawMarksVel(double f, double R, double g, double e, double theta) {
+		this.f = f;
+		this.R = R;
+		this.g = g;
+		this.e = e/100;
+		this.theta = theta;
+		
+		calCriticalVel();
+	}
+	
 	public yawMarksVel(double f, double g) {
 		this.f = f;
 		this.g = g;

@@ -1,15 +1,14 @@
 package estimateVelocity;
 /**********************************************************************************************
- * Sidhpura, Atah Mohammed, Tommy Troung
+ * Sidhpura, Atah Mohammed, Tommy Truong
  * Software Engineering
  * Dr. Andrei
  * 05/03/20
  * 
- * Final Project: 'Estamating vehicle's velocity based on skid marks, yaw marks, and vault case'
+ * Final Project: 'Estimating vehicle's velocity based on skid marks, yaw marks, and vault case'
  * ********************************************************************************************
  */
 import java.util.*;
-import java.util.Map.Entry;
 
 public class estimateVelocity {
 	
@@ -19,6 +18,7 @@ public class estimateVelocity {
 	
 	public static double getDragFactor() { // Getting Drag Factor --------------------------------------------------------------
 		Map<String, Double> values = x.createMap();
+		
 		
 		
 		String factor = "";
@@ -183,6 +183,12 @@ public class estimateVelocity {
 		boolean cont = true;
 		int simCount = 1;
 		double f = 0;
+		
+		// Test Cases-----------------------------------------------------------------------------------------------------------------------
+		simulations.put(simCount++, new skidMarksVel(1.2, 9.8, 0, 30));
+		simulations.put(simCount++, new yawMarksVel(.72, 10, 9.8, 20, 20));
+		simulations.put(simCount++, new vaultVel(9.8, 5, 15, 40));
+		// Test Cases-----------------------------------------------------------------------------------------------------------------------
 		
 		
 		while(cont) {	//Main Menu --------------------------------------------------------------------------------------------------------	

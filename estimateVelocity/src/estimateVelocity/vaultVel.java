@@ -12,6 +12,14 @@ public class vaultVel extends velocityCase {
 		
 	}
 	
+	public vaultVel(double g, double D, double H, double e) {
+		this.g = g;
+		this.D = D;
+		this.H = H;
+		this.e = e;
+		this.vv = Math.sqrt((g*Math.pow(D, 2))/(2*(H + (D*e))));
+	}
+	
 	//get information to calculate the velocity before takeoff
 	public void getInformation() {
 		Scanner kb = new Scanner(System.in);
