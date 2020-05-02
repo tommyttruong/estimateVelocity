@@ -1,7 +1,7 @@
 package estimateVelocity;
 
 import java.util.*;
-public class vaultVel {
+public class vaultVel extends velocityCase {
 	double g;// gravity
 	double D;// horizontal distance
 	double H;// vertical distance
@@ -40,7 +40,7 @@ public class vaultVel {
 		double InstVel = 0;
 		double velocity;
 		System.out.printf("The time taken is %.2f seconds\n", time);
-		for(double count = 0; count < time - .01; count += .01) {
+		for(double count = 0; count <= time - .01; count += .05) {
 			vertVel = g * count;
 			InstVel = Math.sqrt(Math.pow(vertVel, 2) + Math.pow(horizVel, 2));
 			velocity = vv + InstVel;
@@ -57,7 +57,7 @@ public class vaultVel {
 	}
 	
 	public String toString() {
-		return "Vault Velocity: " + vv;
+		return "Vault Velocity base on Vault Case: " + vv;
 	}
 	
 }
