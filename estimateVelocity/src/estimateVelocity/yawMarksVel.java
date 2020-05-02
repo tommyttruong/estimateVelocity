@@ -8,6 +8,7 @@ public class yawMarksVel extends velocityCase {
 	double e;// super elevation of the road
 	double vc;// critical velocity
 	double theta; // angle of the arc length
+	double acceleration = 0;
 	public yawMarksVel() {
 		
 	}
@@ -42,7 +43,7 @@ public class yawMarksVel extends velocityCase {
 		double time = (Math.round((d/(vc))*scale) / scale);
 		System.out.printf("The time taken is %.2f seconds\n", time);
 		System.out.printf("The intital velocity of the car is %.2f meters per second\n", vc);
-		double acceleration = (-1)*(vc/time);
+		acceleration = (-1)*(vc/time);
 		System.out.printf("Decceleration of the car is %.2f meter per second^2\n", acceleration);
 		double InstantaneousVelocity = 0;
 		double velocity = 0;
@@ -52,7 +53,7 @@ public class yawMarksVel extends velocityCase {
 			velocity = InstantaneousVelocity + vc;
 			System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second \n", count, velocity);
 		}
-		System.out.printf("At time = %.2f, the velocity of the car was 0 meters per second\n ", time);
+		System.out.printf("At time = %.2f, the velocity of the car was 0 meters per second\n", time);
 
 	}
 	
@@ -60,6 +61,19 @@ public class yawMarksVel extends velocityCase {
 	public double getCriticalVel() {
 		return vc;
 	}
+	
+	public void getReport() {
+		System.out.printf("******************************REPORT******************************\n");
+		System.out.printf("* %63s*\n", " ");
+		System.out.printf("* Drag Factor: %-50.2f*\n", f);
+		System.out.printf("* Radius of the Yaw Mark: %-39.2f*\n", R);
+		System.out.printf("* Equation: vc = sqrt(Rg(f+e)/(1-fe))                            *\n");
+		System.out.printf("* Critical Curve Velocity: %-38.2f*\n", vc);
+		System.out.printf("* Decceleration of the car is %-35.2f*\n", acceleration);
+		System.out.printf("* %63s*\n", " ");
+		System.out.printf("******************************************************************\n");
+	}
+	
 	
 	public String toString() {
 		return String.format("Initial Velocity Based on Yaw Marks: %.2f Drag Factor: %.2f\n", vc, f);

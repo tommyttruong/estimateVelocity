@@ -46,7 +46,7 @@ public class vaultVel extends velocityCase {
 			velocity = vv + InstVel;
 			System.out.printf("At time = %.2f, the velocity of the car was %.2f meters per second\n ", count, velocity);
 		}
-		System.out.printf("At time = %.2f, the velocity of the car was 0 meters per second\n ", time);
+		System.out.printf("At time = %.2f, the velocity of the car was 0 meters per second\n", time);
 
 		
 	}
@@ -55,6 +55,19 @@ public class vaultVel extends velocityCase {
 		this.vv = Math.sqrt((g*Math.pow(D, 2))/(2*(H + (D*e))));
 		return vv;
 	}
+	
+	public void getReport() {
+		System.out.printf("******************************REPORT******************************\n");
+		System.out.printf("* %63s*\n", " ");
+		System.out.printf("* Force of gravity: %-45.2f*\n", g);
+		System.out.printf("* Horizontal Distance: %-42.2f*\n", D);
+		System.out.printf("* Vertical Distance: %-44.2f*\n", H);
+		System.out.printf("* Equation: v = sqrt(gD^2)/(2(H+De))                             *\n");
+		System.out.printf("* Vault Velocity: %-47.2f*\n", vv);
+		System.out.printf("* %63s*\n", " ");
+		System.out.printf("******************************************************************\n");
+	}
+	
 	
 	public String toString() {
 		return String.format("Vault Velocity base on Vault Case: %.2f\n" , vv);
