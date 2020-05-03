@@ -10,7 +10,7 @@ public class dragFactor {
 		
 	    Map<String, Double> values = new HashMap<String, Double>();
 	
-	
+	    //cement new cn
 	    double dcnlMin = 0.80;
 	    double dcnlMax = 1.20;
 	    double dcnlValue = dcnlMin + (dcnlMax - dcnlMin) * random.nextDouble();

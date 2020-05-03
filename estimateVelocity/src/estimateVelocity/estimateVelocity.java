@@ -310,7 +310,7 @@ public class estimateVelocity {
 					}
 				}
 				break;
-			case 4:{
+			case 4:{ //View Related News --------------------------------------------------------------------------------------------------------------
 				System.out.println("Here are some websites that will help you learn how to drive safely and understand why practicing it is important for you.");
 				System.out.println("\nhttps://drivesafe.com/");
 				System.out.println("https://www.teenlife.com/blogs/safe-driving-why-its-so-important-for-your-teen");
@@ -323,7 +323,7 @@ public class estimateVelocity {
 			}
 				break;
 				
-			case 5:
+			case 5: //View Previously Saved Cases -------------------------------------------------------------------------------------------------------
 				System.out.println("Please enter the admin password (Password = 'password')");
 				int tries = 0;
 				while(!(kb.next().equals("password"))) {
@@ -347,7 +347,7 @@ public class estimateVelocity {
 			
 				break;
 				
-			case 6:	
+			case 6: // Exit -------------------------------------------------------------------------------------------------------
 				System.out.println("Goodbye!");
 				cont = false;
 				break;
