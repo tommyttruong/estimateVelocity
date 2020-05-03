@@ -139,13 +139,13 @@ public class estimateVelocity {
 			factor = factor + "is";
 			break;
 		case 7: 
-			System.out.println("\nPlease select the type of ice");
+			System.out.println("\nPlease select the type of snow");
 			System.out.println("1: Packed");
 			System.out.println("2: Loose");
 			int iceType = kb.nextInt();
 			while(iceType<1 || iceType>2) {
 				System.out.println("\nThat is not an option");
-				System.out.println("Please select the type of ice");
+				System.out.println("Please select the type of snow");
 				System.out.println("1: Packed");
 				System.out.println("2: Loose");
 				iceType = kb.nextInt();

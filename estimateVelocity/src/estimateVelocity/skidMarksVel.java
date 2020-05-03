@@ -44,7 +44,7 @@ public class skidMarksVel extends velocityCase{
 				boolean check2 = false;
 				while(check2 == false) {
 					System.out.println();
-					System.out.println("\nDid all three tires leave Skid-marks?\n1. Yes\n2. No");
+					System.out.println("\nDid all four tires leave Skid-marks?\n1. Yes\n2. No");
 					input = kb.next();
 					if(input.equals("1")) {
 						check2 = true;
